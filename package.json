@@ -1,0 +1,14 @@
+{
+  "name": "truckinvoice",
+  "version": "1.0.0",
+  "description": "An app to help truckers and van operators with invoices",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harel Peri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
