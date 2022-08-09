@@ -1,8 +1,16 @@
-// static const
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const app = require('./app'); // express imported from app.js 
 const port = 5000;
 
-const app = require('./app'); // express imported from app.js 
+dotenv.config({path: './config.env'});
+const DB = process.env.DATABASE_URL.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
 
+mongoose.connect(DB, {
+  useNewUrlParser: true
+}).then(con => {
+  console.log('DB Connected');
+});
 
 
 // open server
